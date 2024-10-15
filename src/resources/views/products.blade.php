@@ -7,7 +7,7 @@
 
 @section('content')
 <div class="products">
-  <div class="products__heading">
+  <div class="products__heading">  
     <h2 >商品一覧</h2>
     <button class="add_button">+ 商品を追加</button>
   </div>
@@ -21,39 +21,26 @@
     </div> 
 
     <div class="products__content__list">
-      <div class="products__content__list__box">
-        <img src="" alt="kiwi" class="products__content__list__image">
-        <div class="products__content__list__info">
-            <h3>キウイ</h3>
-            <p>800</p>
-        </div> 
-      </div>
-
-      <div class="products__content__list__box">
-        <img src="" alt="kiwi" class="products__content__list__image">
-        <div class="products__content__list__info">
-            <h3>キウイ</h3>
-            <p>800</p>
-        </div> 
-      </div>
-
-
-
-
-    </div>
-
-
-  </div>
-
-
-
-
-
+    @foreach ($products as $product)
+        <a href="{{ url('/products/' . $product->id) }}" class="products__content__list__box">
+            <img src="{{ asset('storage/' . $product->image) }}" alt="{{$product->name}}" class="products__content__list__image">
+            <div class="products__content__list__info">        
+                <h3>{{$product->name}}</h3>
+                <p>￥{{$product->price}}</p>
+            </div> 
+        </a>
+    @endforeach
 </div>
 
 
 
+</div>  
+<!-- ページネーションのリンク -->
+<div class="pagination">
+    {{ $products->links() }}
+</div>
 
+</div>
 
 @endsection
 

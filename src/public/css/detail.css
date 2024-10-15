@@ -1,0 +1,44 @@
+.detail{
+  width: 60%;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+}
+
+p{
+  width: 60%;  
+  margin: auto;
+  margin-top: 50px;
+}
+
+.detail__contents{
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail__contents__image{
+  text-align: left;
+}
+
+.detail__contents__info__category{
+  margin-bottom: 100px;
+}
+
+.detail__contents__info{
+  margin-bottom: 50px;
+}
+
+.detail__contents__info__category {
+  display: flex;
+  flex-direction: column; /* 縦方向に並べる */
+  text-align: left;
+  font-size: 20px;
+}
+
+.seasons-container {
+  display: flex; /* 横並びにする */
+}
+
+.season-item {
+  margin-right: 15px; /* 各チェックボックスの間にスペースを追加 */
+}

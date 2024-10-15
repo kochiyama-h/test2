@@ -1,0 +1,108 @@
+.products{
+ width: 80%;
+ margin: auto;
+ 
+}
+
+
+/* + 商品を追加 */
+.add_button{
+  background-color: #ffa929;  
+  height: 30px;  
+  border: none;
+  margin-top: 25px; 
+  
+ 
+}
+
+/* + 商品を追加 ホバー*/
+.add_button:hover{
+  background-color: #e3a241;  
+  
+}
+
+.products__heading {
+ display: flex;
+ justify-content: space-between;
+}
+
+
+/* 検索フォーム */
+.search_text{
+  border-radius: 80px;
+  border: solid 1px #909090;
+  height: 30px;
+  width: 200px;
+}
+
+
+
+/* 検索ボタン */
+.search_button{
+  background-color: #f5c800;
+  width: 140px;
+  width: 200px;
+}
+
+.search_button:hover{
+  background-color: #d2ad04;
+  
+}
+
+.products__content__search {
+  display: flex;
+  flex-direction: column; /* 縦並びにする */
+}
+
+.search_text {
+  margin-bottom: 10px; /* ボタンとの間にスペースを追加 */
+}
+
+
+.products__content {
+  display: flex; /* 横並びにする */
+  
+}
+
+.products__content__search {
+  flex: 2; /* 全体の2の部分を占める */
+  margin-right: 20px; /* 右側にスペースを追加 */
+  background-color: aliceblue;
+}
+
+.products__content__list {
+  flex: 8; /* 全体の8の部分を占める */
+  background-color: aquamarine;
+  display: flex; /* 横並びにする */
+  flex-wrap: wrap; /* 行がいっぱいになったら折り返す */
+}
+
+.products__content__list__image {
+  width: 100%; /* 画像をリスト全体に広げる */
+  height: auto; /* 高さは自動調整 */
+}
+
+.products__content__list__box {
+  display: flex; /* 横並びにする */
+  align-items: flex-start; /* 上揃えにする */
+  background-color: azure;
+  width: calc(33.33% - 20px); /* 3つ並べるための幅（間隔を考慮） */
+  margin: 10px; /* 各ボックスの間にスペースを追加 */
+  box-sizing: border-box; /* パディングやマージンを含めた幅計算 */
+}
+
+.products__content__list__image {
+  width: 100%; /* 画像をボックスの幅に合わせる */
+  height: auto; /* 高さは自動調整 */
+  margin-right: 10px; /* 画像とテキストの間にスペースを追加 */
+}
+
+.products__content__list__info {
+  display: flex; /* 横並びにする */
+  align-items: center; /* 縦の中央揃え */
+}
+
+.products__content__list__info h3 {
+  margin: 0; /* マージンをリセット */
+  margin-right: 10px; /* 商品名と値段の間にスペースを追加 */
+}

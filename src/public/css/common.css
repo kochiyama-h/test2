@@ -1,0 +1,10 @@
+html,
+body {
+  height: 100%;
+}
+
+.header__heading{
+  color: #f7d641;
+  font-size: 25px;
+  background-color: #fff;
+}

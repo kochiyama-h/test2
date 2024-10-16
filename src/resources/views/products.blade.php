@@ -12,7 +12,7 @@
     <form action="{{ route('products.register') }}" method="get">
      
       <input class="add_button" type="submit" value="+ 商品を追加">
-    <!-- <button class="add_button">+ 商品を追加</button> -->
+    
     </form>
     
   </div>
@@ -20,10 +20,12 @@
   <div class="products__content">
 
 
-    <div class="products__content__search">
-      <input class="search_text" type="text" placeholder="商品名で検索">
-      <button class="search_button">検索</button>  
-    </div> 
+  <div class="products__content__search">
+    <form action="{{ route('products.search') }}" method="GET"> 
+        <input class="search_text" type="text" name="name" placeholder="商品名で検索"> 
+        <button class="search_button" type="submit">検索</button>  
+    </form>
+</div>
 
     <div class="products__content__list">
     @foreach ($products as $product)

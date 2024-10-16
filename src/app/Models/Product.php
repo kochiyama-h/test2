@@ -22,4 +22,13 @@ class Product extends Model
     {
         return $this->belongsToMany(Season::class, 'product_season');
     }
+
+    //検索機能
+    public function scopeSearch($query, $search)
+    {
+        if ($search) {
+            return $query->where('name', 'LIKE', '%' . $search . '%');
+        }
+        return $query;
+    }
 }

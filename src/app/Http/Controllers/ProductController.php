@@ -18,6 +18,16 @@ class ProductController extends Controller
         return view ('products',['products' => $products]);
     }
 
+    public function search(Request $request)
+    {
+        $search = $request->input('name'); // 'name' を取得する
+        $products = Product::when($search, function($query) use ($search) {
+            return $query->where('name', 'LIKE', '%' . $search . '%');
+        })->paginate(6);
+        
+        return view('search', compact('products'));
+    }
+
 
 
      // 商品詳細画面

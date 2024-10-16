@@ -21,6 +21,8 @@ use App\Http\Controllers\ProductController;
 
 Route::prefix('products')->group(function () {
     Route::get('', [ProductController::class, 'index'])->name('products.index');
+    Route::get('register', [ProductController::class, 'create'])->name('products.register'); 
+    Route::post('store', [ProductController::class, 'store'])->name('products.store');
     Route::get('{id}', [ProductController::class, 'show'])->name('products.show');
     Route::post('{id}/update', [ProductController::class, 'update'])->name('products.update');
 });

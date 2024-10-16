@@ -9,7 +9,12 @@
 <div class="products">
   <div class="products__heading">  
     <h2 >商品一覧</h2>
-    <button class="add_button">+ 商品を追加</button>
+    <form action="{{ route('products.register') }}" method="get">
+     
+      <input class="add_button" type="submit" value="+ 商品を追加">
+    <!-- <button class="add_button">+ 商品を追加</button> -->
+    </form>
+    
   </div>
 
   <div class="products__content">

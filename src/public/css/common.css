@@ -4,6 +4,7 @@ body {
 }
 
 .header__heading{
+  text-align: left;
   color: #f7d641;
   font-size: 25px;
   background-color: #fff;

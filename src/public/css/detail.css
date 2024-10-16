@@ -1,44 +1,106 @@
-.detail{
-  width: 60%;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-title {
+  font-size: 24px;
+  margin-bottom: 20px;
   text-align: center;
-  margin: auto;
-  margin-top: 50px;
 }
 
-p{
-  width: 60%;  
-  margin: auto;
-  margin-top: 50px;
+.product-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 20px;
 }
 
-.detail__contents{
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.season-options {
+  display: flex; /* 横並びにするためにflexboxを使用 */
+  margin-bottom: 15px;
+}
+
+.season-options label {
+  margin-right: 15px; /* 右側のマージンを設定 */
+}
+
+.form-buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content:center;
 }
 
-.detail__contents__image{
-  text-align: left;
+.save-button {
+  background-color: #ffcc00;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.detail__contents__info__category{
-  margin-bottom: 100px;
+.back-button {
+  display: inline-block; /* インラインブロックにしてボタンのように見せる */
+  background-color: #c3c1c0; /* 背景色を設定 */
+  color: white; /* テキストの色を白に */
+  padding: 10px 35px; /* パディングを設定 */
+  border-radius: 4px; /* ボーダーの角を丸くする */
+  text-decoration: none; /* 下線を消す */
+  margin-right: 20px;
 }
 
-.detail__contents__info{
-  margin-bottom: 50px;
+.back-button:hover {
+  background-color: #9d9d9c; /* ホバー時の背景色を設定 */
 }
 
-.detail__contents__info__category {
-  display: flex;
-  flex-direction: column; /* 縦方向に並べる */
-  text-align: left;
-  font-size: 20px;
+.delete-button {
+  
+  color: #ff4d4d; /* 赤色に設定 */
+  padding: 10px 15px; /* パディングを設定 */
+  
+  border: none; /* ボーダーを非表示 */
+  cursor: pointer; /* カーソルをポインターにする */
+  margin-left: 20px; /* 左のマージンを追加 */
 }
 
-.seasons-container {
-  display: flex; /* 横並びにする */
+.delete-button:hover {
+  color: #850606; /* ホバー時の背景色を設定 */
 }
 
-.season-item {
-  margin-right: 15px; /* 各チェックボックスの間にスペースを追加 */
+.form__error.text-danger {
+  color: red; /* 赤色に設定 */
 }

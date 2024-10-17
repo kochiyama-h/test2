@@ -21,8 +21,9 @@ Laravel 環境構築　　
   -MySQL 8.0.26　　
 
 ## ER図　　
+![ER図 drawio](https://github.com/user-attachments/assets/ae2d5966-066e-406d-a2d0-1d2ddcac57b1)
 
-     ![ER図 drawio](https://github.com/user-attachments/assets/23c9cce6-aaa0-4a0f-83b2-5ddac80ec233)
+   
 
  
 

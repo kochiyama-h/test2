@@ -1,11 +1,11 @@
-# アプリケーション名　　
-もぎたて
+# アプリケーション名  
+もぎたて  
 
 
-## 環境構築　　
-Dockerビルド　　
-　1 git clone git@github.com:kochiyama-h/test2.git 　　
-  2 docker-compose up -d --build　　
+## 環境構築  　　
+Dockerビルド  　　
+　1 git clone git@github.com:kochiyama-h/test2.git   　　
+  2 docker-compose up -d --build  　　
 
 Laravel 環境構築　　
 　 1 docker-compose exec php bash　　

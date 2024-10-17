@@ -7,7 +7,8 @@
 @section('content')
 <div class="container">
     <h1 class="product-title">{{ $product->name }}</h1>
-    <img src="{{ asset($product->image) }}" alt="商品画像" class="product-image">
+    <!-- <img src="{{ asset($product->image) }}" alt="商品画像" class="product-image"> -->
+    <img src="{{ asset('storage/' . $product->image) }}" alt="商品画像" class="product-image">
     
     <!-- 商品情報の更新フォーム -->
     <form action="{{ route('products.update', $product->id) }}" method="POST" enctype="multipart/form-data">
@@ -64,7 +65,7 @@
         @csrf
         @method('DELETE')
         <button type="submit" class="delete-button">
-            <i class="fas fa-trash-alt"></i> 削除
+            <i class="fas fa-trash-alt"></i> 
         </button>
     </form>
 </div>

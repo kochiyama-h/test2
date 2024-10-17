@@ -52,12 +52,12 @@ textarea {
 }
 
 .season-options {
-  display: flex; /* 横並びにするためにflexboxを使用 */
+  display: flex; 
   margin-bottom: 15px;
 }
 
 .season-options label {
-  margin-right: 15px; /* 右側のマージンを設定 */
+  margin-right: 15px; 
 }
 
 .form-buttons {
@@ -75,32 +75,34 @@ textarea {
 
 .back-button {
   display: inline-block; /* インラインブロックにしてボタンのように見せる */
-  background-color: #c3c1c0; /* 背景色を設定 */
-  color: white; /* テキストの色を白に */
-  padding: 10px 35px; /* パディングを設定 */
-  border-radius: 4px; /* ボーダーの角を丸くする */
-  text-decoration: none; /* 下線を消す */
+  background-color: #c3c1c0; 
+  color: white; 
+  padding: 10px 35px; 
+  border-radius: 4px; 
+  text-decoration: none; 
   margin-right: 20px;
 }
 
 .back-button:hover {
-  background-color: #9d9d9c; /* ホバー時の背景色を設定 */
+  background-color: #9d9d9c; 
 }
 
-.delete-button {
+.delete-button {  
+  color: #ff4d4d; 
+  padding: 10px 15px;  
+  border: none; 
+  cursor: pointer;  
+  margin-left: 90%;
+
   
-  color: #ff4d4d; /* 赤色に設定 */
-  padding: 10px 15px; /* パディングを設定 */
-  
-  border: none; /* ボーダーを非表示 */
-  cursor: pointer; /* カーソルをポインターにする */
-  margin-left: 20px; /* 左のマージンを追加 */
 }
+
+
 
 .delete-button:hover {
-  color: #850606; /* ホバー時の背景色を設定 */
+  color: #850606; 
 }
 
 .form__error.text-danger {
-  color: red; /* 赤色に設定 */
+  color: red; 
 }

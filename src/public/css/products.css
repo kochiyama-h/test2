@@ -2,7 +2,10 @@
  width: 80%;
  margin: auto;
  
+ 
 }
+
+
 
 
 /* + 商品を追加 */
@@ -14,7 +17,7 @@
    
 }
 
-/* + 商品を追加 ホバー*/
+
 .add_button:hover{
   background-color: #e3a241;  
   
@@ -34,6 +37,15 @@
   width: 200px;
 }
 
+.sort__button select{  
+  border: solid 1px #909090;
+  height: 30px;
+  width: 200px;
+  margin-top: 50px;
+  color:#909090 ;
+}
+
+
 
 
 /* 検索ボタン */
@@ -50,74 +62,70 @@
 
 .products__content__search {
   display: flex;
-  flex-direction: column; /* 縦並びにする */
+  flex-direction: column; 
 }
 
 .search_text {
-  margin-bottom: 10px; /* ボタンとの間にスペースを追加 */
+  margin-bottom: 10px; 
 }
 
 
 .products__content {
-  display: flex; /* 横並びにする */
-  
+  display: flex;
 }
 
 .products__content__search {
-  flex: 2; /* 全体の2の部分を占める */
-  margin-right: 20px; /* 右側にスペースを追加 */
-  /* background-color: aliceblue; */
+  flex: 2; 
+  margin-right: 20px; 
+  
 }
 
 .products__content__list {
-  flex: 8; /* 全体の8の部分を占める */
-  /* background-color: aquamarine; */
-  display: flex; /* 横並びにする */
-  flex-wrap: wrap; /* 行がいっぱいになったら折り返す */
+  flex: 8;   
+  display: flex; 
+  flex-wrap: wrap;
 }
 
 .products__content__list__box {
   display: flex;
-  flex-direction: column; /* 画像とテキストを縦に並べる */
-  align-items: center; /* 中央揃え */
-  /* background-color: azure; */
+  flex-direction: column;
+  align-items: center;
   width: calc(33.33% - 20px); /* 3つ並べるための幅 */
-  margin: 10px; /* 各ボックスの間にスペースを追加 */
-  box-sizing: border-box; /* パディングやマージンを含めた幅計算 */
-  padding: 10px; /* 内側にパディングを追加 */
-  border: 1px solid #ddd; /* ボックスに境界線を追加 */
-  border-radius: 8px; /* 角を丸く */
+  margin: 10px;
+  box-sizing: border-box; 
+  padding: 10px; 
+  border: 1px solid #ddd; 
+  border-radius: 8px; 
 }
 
 .products__content__list__image {
-  width: 100%; /* 画像をボックスの幅に合わせる */
-  height: auto; /* 高さは自動調整 */
-  margin-bottom: 10px; /* 画像とテキストの間にスペースを追加 */
+  width: 100%; 
+  height: auto; 
+  margin-bottom: 10px; 
 }
 
 
 
 .products__content__list__info {
-  display: flex; /* 横並びにする */
-  justify-content: space-between; /* スペースを均等に */
-  align-items: center; /* 縦の中央揃え */
-  background-color: rgba(255, 255, 255, 0.9); /* 背景に白の半透明を追加 */
-  padding: 10px; /* パディングを追加 */
-  border-radius: 8px; /* 角を丸くする */
-  margin-top: 5px; /* 画像との間にスペースを追加 */
-  width: 100%; /* ボックスの幅を100%に設定 */
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  background-color: rgba(255, 255, 255, 0.9); 
+  border-radius: 8px; 
+  margin-top: 5px; 
+  width: 100%; 
 }
 
 .products__content__list__info h3 {
-  margin: 0; /* マージンをリセット */
-  font-size: 18px; /* 商品名のフォントサイズ */
-  color: #333; /* 商品名の色 */
-  font-weight: bold; /* 商品名を太字に */
+  margin: 0; 
+  font-size: 18px; 
+  color: #333; 
+  font-weight: bold; 
 }
 
 .products__content__list__info p {
-  margin: 0; /* マージンをリセット */
-  font-size: 16px; /* 価格のフォントサイズ */
+  margin: 0; 
+  font-size: 16px;
   
 }
 

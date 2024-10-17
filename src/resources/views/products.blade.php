@@ -21,11 +21,21 @@
 
 
   <div class="products__content__search">
-    <form action="{{ route('products.search') }}" method="GET"> 
-        <input class="search_text" type="text" name="name" placeholder="商品名で検索"> 
-        <button class="search_button" type="submit">検索</button>  
-    </form>
-</div>
+        <form action="{{ route('products.search') }}" method="GET"> 
+            <input class="search_text" type="text" name="name" placeholder="商品名で検索"> 
+            <button class="search_button" type="submit">検索</button>  
+        </form>
+
+
+        <form class="sort__button">
+            <select name="select">
+                <option value="">高い順に表示</option>
+                <option value="">低い順に表示</option>    
+            </select>
+        </form>
+      </div>
+
+    
 
     <div class="products__content__list">
     @foreach ($products as $product)
@@ -37,7 +47,7 @@
             </div> 
         </a>
     @endforeach
-</div>
+    </div>
 
 
 

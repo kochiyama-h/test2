@@ -96,7 +96,11 @@
   padding: 10px; 
   border: 1px solid #ddd; 
   border-radius: 8px; 
+  text-decoration: none;
+  color: #333;
 }
+
+
 
 .products__content__list__image {
   width: 100%; 
@@ -146,6 +150,27 @@ svg.w-5.h-5 {
   display: none; 
 }
 
+/* 価格順表示 */
 
+.sort-tag{
+  border-radius: 95%; 
+  border: 1px solid #f5c800;
+  height: 30px;
+  width: 180px;
+  margin-top: 20px;
+  text-align: center;
+  padding: 5px 10px ;
+  color: #464545;
+}
 
+.sort-tag button{
+  border-radius: 50%; 
+  color: #f5c800;
+  border: 1px solid #f5c800;
+  background-color: rgb(247, 248, 249);
+}
 
+.sort-tag button:hover{
+  color: #eac003;
+  background-color: #eeeded;
+}

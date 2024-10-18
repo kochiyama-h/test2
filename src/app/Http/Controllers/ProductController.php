@@ -12,11 +12,33 @@ class ProductController extends Controller
 {
 
     //  商品一覧画面
-    public function index()
-    {
-        $products = Product::paginate(6);
-        return view ('products',['products' => $products]);
-    }
+
+    public function index(Request $request)
+{
+    $sort = $request->input('sort');
+    
+    $products = Product::when($sort === 'high_to_low', function($query) {
+            return $query->orderBy('price', 'desc');
+        })
+        ->when($sort === 'low_to_high', function($query) {
+            return $query->orderBy('price', 'asc');
+        })
+        ->paginate(6);
+
+    // ページネーションに現在のクエリパラメータを追加
+    $products->appends(['sort' => $sort]);
+
+    return view('products', ['products' => $products]);
+}
+
+
+
+
+    // public function index()
+    // {
+    //     $products = Product::paginate(6);
+    //     return view ('products',['products' => $products]);
+    // }
 
     public function search(Request $request)
     {
@@ -39,26 +61,35 @@ class ProductController extends Controller
          return view('detail', compact('product', 'seasons')); // ビューに製品と季節を渡す
      }
 
-// 更新
-public function update(ProductRequest $request, $id) { 
-    $product = Product::findOrFail($id);    
+
+
+     //更新
+
+    public function update(ProductRequest $request, $id) { 
+        
+        $product = Product::findOrFail($id);    
+        
+        // 画像のアップロード処理
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('images', 'public');
+            $product->image = $path;
+        }
     
-    // 画像のアップロード処理
-    if ($request->hasFile('image')) {
-        $path = $request->file('image')->store('images', 'public');
-        $product->image = $path;
+        $product->name = $request->input('name');
+        $product->price = $request->input('price');
+        $product->description = $request->input('description');
+    
+        // 選択された季節のIDを直接取得
+        $seasonIds = $request->input('seasons', []);
+
+        // 中間テーブルに季節情報を保存
+        $product->seasons()->sync($seasonIds);
+    
+        // 商品の保存
+        $product->save();  
+    
+        return redirect()->route('products.index')->with('success', '商品情報が更新されました。');
     }
-
-    $product->name = $request->input('name');
-    $product->price = $request->input('price');
-    $product->description = $request->input('description');
-
-    // 季節の更新
-    $product->seasons()->sync($request->input('season', [])); // 季節を配列として受け取る
-    $product->save(); 
-
-    return redirect()->route('products.index')->with('success', '商品情報が更新されました。');
-}
     
     //商品登録画面
     public function create()

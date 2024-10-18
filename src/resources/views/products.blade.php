@@ -27,16 +27,28 @@
         </form>
 
 
-        <form class="sort__button">
-            <select name="select">
-                <option value="">高い順に表示</option>
-                <option value="">低い順に表示</option>    
-            </select>
-        </form>
+        <form action="{{ route('products.index') }}" method="GET" class="sort__button">
+    <select name="sort" onchange="this.form.submit()">
+        <option value="" disabled selected>並び替えを選択</option> 
+        <option value="high_to_low">高い順に表示</option>
+        <option value="low_to_high">低い順に表示</option>    
+    </select>
+</form>
+
+      @if(request('sort'))
+        <div class="sort-tag">
+            
+            <span>{{ request('sort') === 'high_to_low' ? '高い順に表示' : '低い順に表示' }}</span>
+            <form action="{{ route('products.index') }}" method="GET" style="display: inline;">
+            <button type="submit">×</button>
+            <input type="hidden" name="sort" value=""> <!-- sortを空にする -->
+            </form>
+        </div>
+        @endif
+
       </div>
 
-    
-
+      
     <div class="products__content__list">
     @foreach ($products as $product)
         <a href="{{ url('/products/' . $product->id) }}" class="products__content__list__box">

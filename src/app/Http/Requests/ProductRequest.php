@@ -46,6 +46,7 @@ class ProductRequest extends FormRequest
         'image.required' => '商品画像を登録してください',
         'image.image' => '「.png」または「.jpeg」形式でアップロードしてください', 
         'seasons.required' => '季節を選択してください',
+        'seasons.min' => '季節を選択してください',
     ];
   }
 }

@@ -31,13 +31,33 @@
             @enderror
         </div>
 
+        <!-- <div class="form-group">
+            <label>季節</label>
+            <div class="season-options">
+                @foreach($seasons as $season)
+                
+
+                    <label>
+                        <input type="checkbox" name="seasons[]" value="{{ $season->id }}" 
+                            {{ $product->seasons->contains($season->id) ? 'checked' : '' }}>
+                        {{ $season->name }}
+                    </label>
+
+                @endforeach
+            </div>
+            @error('seasons')
+                <div class="form__error text-danger">{{ $message }}</div>
+            @enderror
+        </div> -->
+
+
         <div class="form-group">
             <label>季節</label>
             <div class="season-options">
                 @foreach($seasons as $season)
                     <label>
-                        <input type="checkbox" name="seasons[]" value="{{ $season->name }}" 
-                        {{ $product->seasons->contains($season) ? 'checked' : '' }}> 
+                        <input type="checkbox" name="seasons[]" value="{{ $season->id }}" 
+                            {{ $product->seasons->contains($season->id) ? 'checked' : '' }}>
                         {{ $season->name }}
                     </label>
                 @endforeach

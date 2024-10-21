@@ -5,6 +5,40 @@ body {
   padding: 20px;
 }
 
+.flex{
+  display: flex;
+  align-items: center;
+}
+
+.child_2{
+  margin-left: 10px;
+  width: 50%;
+ 
+  
+}
+
+.child_1{
+  width: 50%;
+  
+  
+  
+}
+
+.child_1 img{
+  width: 100%;
+}
+
+.product-title p{
+ text-align: left;
+}
+
+.product-title a{
+  color: #8dbee4; 
+  text-decoration: none;
+ 
+}
+
+
 .container {
   max-width: 600px;
   margin: auto;

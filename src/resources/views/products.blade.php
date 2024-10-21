@@ -7,6 +7,7 @@
 
 @section('content')
 <div class="products">
+
   <div class="products__heading">  
     <h2 >商品一覧</h2>
     <form action="{{ route('products.register') }}" method="get">
@@ -16,6 +17,8 @@
     </form>
     
   </div>
+
+ 
 
   <div class="products__content">
 
